@@ -32,6 +32,7 @@ nav {
     width: 100%;
     height: 80px;
     position: fixed;
+    z-index: 1;
 }
 
 .navbar-color {
@@ -98,7 +99,7 @@ nav ul li a:hover {
 
 .jumbotron {
     background: linear-gradient(rgba(0, 0, 0, 0.25),
-    rgba(0, 0, 0, 0.25)), url(img/jumbotron.jpg);
+    rgba(0, 0, 0, 0.25)), url(aset/img/jumbotron.jpg);
     background-size: cover;
     width: 100%;
     height: 900px;
@@ -116,9 +117,36 @@ nav ul li a:hover {
 }
 
 .jumbotron-content p {
-    font-size: 20px;
+    font-family: Avenir;
+    font-weight: bold;
+    font-size: 30px;
     text-align: left;
     color: #FFFFFF;
+    padding-bottom: 20px;
+}
+
+button {
+    background: none;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    border: 2px solid #ce1bd5;
+    font-size: 20px;
+    border-radius: 100px;
+    transition: .4s;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    font-family: Avenir;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover {
+    background-color: #ce1bd5;
 }
 
 /*About Us*/
@@ -130,6 +158,7 @@ nav ul li a:hover {
 
 .content-about h1 {
     font-size: 40px;
+    font-family: Avenir;
     margin-bottom: 20px;
     text-align: left;
 }
@@ -145,23 +174,31 @@ nav ul li a:hover {
 
 /*Founders*/
 .founder-container {
-    padding: 50px 100px;
+    padding: 50px 200px;
     width: auto;
     height: auto;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: #dee7ec;
+    background: #021e41;
     background-size: cover;
     background-attachment: fixed;
-    
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.founder-header h1 {
+    padding-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
 }
 
 .founder {
-    justify-content: right;
-    display: table;
+    justify-content: center;
+    display: table-cell;
     width: 400px;
-    height: 500px;
+    height: auto;
     background: white;
 
     font-family: Inter;
@@ -169,7 +206,6 @@ nav ul li a:hover {
 
     transition: 0.5s ease;
     cursor: pointer;
-    margin:30px;
 }
 
 .founder:hover {
@@ -178,23 +214,23 @@ nav ul li a:hover {
 }
 
 .founder-pic#pic1 {
-    width: 400px;
+    width: auto;
     height: 400px;
-    background: url(img/bill.jpg);
+    background: url(aset/img/bill.jpg);
     background-size: cover;
 }
 
 .founder-pic#pic2 {
-    width: 400px;
+    width: auto;
     height: 400px;
-    background: url(img/mark.jpg);
+    background: url(aset/img/mark.jpg);
     background-size: cover;
 }
 
 .founder-pic#pic3 {
-    width: 400px;
+    width: auto;
     height: 400px;
-    background: url(img/elon.jpg);
+    background: url(aset/img/elon.jpg);
     background-size: cover;
 }
 
@@ -210,7 +246,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: url(img/coding.jpg);
+    background-color: #102a5a;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -262,48 +298,56 @@ nav ul li a:hover {
 }
 
 .card-image#card1 {
-    background: url(img/1.jpg);
+    background: url(aset/img/1.jpg);
     background-size: cover;
 }
   
 /*Kartu 2*/
 .card-image#card2 {
-    background: url(img/2.jpg);
+    background: url(aset/img/2.jpg);
     background-size: cover;
 }
 
 /*Kartu 3*/
 .card-image#card3 {
-    background: url(img/3.jpg);
+    background: url(aset/img/3.jpg);
     background-size: cover;
 }
 
 /*Kartu 4*/
 .card-image#card4 {
-    background: url(img/jumbotron.jpg);
+    background: url(aset/img/jumbotron.jpg);
     background-size: cover;
 }
 
 /* Clients */
+article.clients {
+    text-align: center;
+    margin: 50px auto;
+    padding: 0 80px;
+
+}
+
 .clients {
     text-align: center;
+    font-family: Avenir;
 }
 
 .clients img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     width: auto;
+    height: auto;
 }
 
 .clients h1 {
     margin: 40px 0;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .clients span {
     margin: 40px 0;
-    font-size: 50px;
+    font-size: 40px;
     color: #f178f5;
 }
 
@@ -319,9 +363,14 @@ aside {
     padding: 0 80px;
 }
 
+#dicoding {
+    font-size: 30px;
+}
+
 .profile-container {
     font-family: Inter;
     margin: 20px auto;
+    width: auto;
     width: 540px;
     overflow: hidden;
     background: white;
@@ -335,7 +384,7 @@ aside {
 
 .profile-cover img {
     width: 100%;
-    height: 100%;
+    height: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     object-fit: cover;
@@ -451,13 +500,16 @@ footer {
 
 .footer-list a {
     padding-bottom: 20px;
-    font-family: "Aveneir Next";
+    font-family: Inter;
     color: #FFFFFF;
     text-decoration: none;
 }
 
 
 @media screen and (max-width: 1080px) {
+    .jumbotron {
+        height: 1000px;
+    }
     .checkbtn {
         display: block;
     }
@@ -471,6 +523,9 @@ footer {
         text-align: center;
         transition: all .5s;
     }
+    nav label i {
+        padding-top: 25px;
+    }
     nav ul li {
         display: block;
         margin: 50px 0;
@@ -481,6 +536,9 @@ footer {
     }
     a:hover {
         background: none;
+    }
+    .founder {
+        display:table;
     }
     #check:checked ~ ul {
         left: 0;
@@ -538,25 +596,37 @@ footer {
     }
     
     .card-image#card1 {
-        background: url(img/1.jpg);
+        background: url(aset/img/1.jpg);
         background-size: cover;
     }
       
     /*Kartu 2*/
     .card-image#card2 {
-        background: url(img/2.jpg);
+        background: url(aset/img/2.jpg);
         background-size: cover;
     }
     
     /*Kartu 3*/
     .card-image#card3 {
-        background: url(img/3.jpg);
+        background: url(aset/img/3.jpg);
         background-size: cover;
     }
     
     /*Kartu 4*/
     .card-image#card4 {
-        background: url(img/jumbotron.jpg);
+        background: url(aset/img/jumbotron.jpg);
         background-size: cover;
     }
+}
+
+.intro-text {
+    width: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s all ease-in-out;
+}
+
+.text-appear {
+    opacity: 1;
+    transform: translateY(0px);
 }
